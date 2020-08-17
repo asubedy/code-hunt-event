@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    console.log("Weell ok I think you are getting somewhere to solve, so let me tel you a story there was a boy who was very HYPER. His hyperness caused lot of trouble in the village he stayed, so the mayor of the village wrote a TEXT to that boy's parents stating the trouble he caused. But sadly the mayors computer only accepted MARKUP LANGUAGE. So he could not send a text to the boy's parents and hence the village continued to adjust with the boys's hyperness. ")
+</script>
+<body bg = "something.jpg" onload=>
+    <header class = heading>
+        <h1>Code Hunt</h1>    
+    </header>
+    <section id= description>
+        <div id ="msg">
+
+        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+        showText("#msg", ["Welcome to the  [something round] round of the Hackit a Techquest Event.","\nHope you had fun in the previous round, and we hope so you continue to move forward to reach the final page and successfuly complete the code hunt.", "\nIn this round you need to crack the password to advance in the next round.", "\nAll the best.","\nAnd make sure that your inspection of this page does not goes in vain as sometime the problem solves itslef if we look into the source of it."], 0, 3000);
+        });
+
+        let showText = function (target, message, index, interval) {
+        if (index < message.length) {
+            document.querySelector(target).innerText =document.querySelector(target).innerText + message[index++];
+            setTimeout(function () { showText(target, message, index, interval); }, interval);
+        }
+        }
+        //["Welcome to the  [something round] round of the Hackit a Techquest Event.","\nHope you had fun in the previous round, and we hope so you continue to move forward to reach the final page and successfuly complete the code hunt.", "\nIn this round you need to crack the password to advance in the next round.", "\nAll the best.","\nAnd make sure that your inspection of this page does not goes in vain as sometime the problem solves itslef if we look into the source of it."]
+        //printLetterByLetter("msg", "Hello howdyy\nThis is great" , 50);
+    </script>
+    <script>
+        function check(){
+            const userInput = document.getElementById("passwordInput").value;
+            console.log(userInput);
+            if(userInput=="something"){
+                document.location.href = userInput+".htm";
+            }
+            else{
+                console.log("false");
+            }
+        
+        }
+    </script>
+        <div id = input >
+            <form action="javascript:check()">
+                <label>Password: 
+                    <input type="password" id = "passwordInput" placeholder="Enter the password">
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </section>
+      
+</body>
+</html>
