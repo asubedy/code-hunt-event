@@ -1,4 +1,7 @@
 body{
+    background: rgb(170, 169, 169);
+}
+section{
     width: 600px;
     background:rgb(153, 153, 153);
     padding:30px;
@@ -12,4 +15,22 @@ body{
     margin-right:auto;
     margin-top:50px;
     margin-bottom:50px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+#logos{
+    margin-top: 70px;
+    position: fixed;
+    bottom:0;
+    text-align: center;
+    font-family: monospace;
+}
+#instagramLogo{
+    width : 40px;
+}
+#linkedinLogo{
+    width: 37px;
+    opacity: 0.7;
 }
