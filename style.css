@@ -1,9 +1,9 @@
 body{
-    background: rgb(129, 129, 133);
+    background:rgb(129, 129, 133);
 }
 section{
     width: 600px;
-    background: rgb(129, 129, 133);
+    background:rgb(65, 64, 64);
     padding:30px;
     font-size: 15px;
     font-family: fixedsys, LucidaTerminal, monospace;
@@ -17,7 +17,9 @@ section{
     margin-bottom:50px;
 }
 h1 {margin-bottom:10px;margin-top:-10px;}
-
+#input{
+    text-align:  center;
+}
 footer{
     display: flex;
     justify-content: center;

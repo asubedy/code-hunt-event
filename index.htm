@@ -28,22 +28,13 @@
                 }
             </script>
         </div>
-    <script>
-        function check(){
-            const userInput = document.getElementById("passwordInput").value;
-            console.log(userInput);
-            if(userInput=="something"){
-                document.location.href = userInput+".htm";
-            }
-            else{
-                console.log("false");
-            }    
-        }
-    </script>
-    <br>
+
+            <script id = "check" src="scripts.js"></script>
+
+        <br>
         <div id = input >
             <form action="javascript:check()">
-                <label>Password: 
+                <label><strong>Password: </strong> 
                     <input type="password" id = "passwordInput" placeholder="Enter the password">
                 </label>
                 <button type="submit">Submit</button>
@@ -60,10 +51,12 @@
 
             }, 7000);
         </script>
+
         <div id = "below">
-            And make sure that your <strong>inspection</strong> of this page does not goes in vain as sometime the problem solves itself if we look into the <strong>source</strong>  of it.<br><br> All the best"
+            And make sure that your <strong><i>inspection</i></strong> of this page does not goes in vain as sometime the problem solves itself if we look into the <strong><i>source</i></strong>  of it.<br><br> All the best"
         </div>
-            <!--HINT DISPLAY-->
+
+            <!--HINT DISPLAY SCRIPT-->
             <script>
                 const anotherWaiting = document.getElementById("below");
                 anotherWaiting.style.display= "none";
