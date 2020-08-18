@@ -6,17 +6,21 @@
     <title>CodeHunt</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <script>
     console.log("When someone looks at the page-source they find lot of clickable links, its really fun to see where a link takes you.You learn various new things.");
 </script>
+
+<body>
     <section id= description>
-        <h1>Code Hunt</h1>
+        <h1>HackIT</h1>
+
         <div id ="msg">
             <!--Display of Text-->
              <script>
                 document.addEventListener('DOMContentLoaded', function() {
 
-                showText("#msg  ", ["Welcome to the  [something round] round of the HackIT a Techquest Event.\n","\nHope you had fun in the previous round, and we hope so you continue to move forward to reach the final page and successfuly complete the code hunt.\n", "\nIn this round you need to crack the password to advance in the next round.\n",], 0, 1700);
+                showText("#msg  ", ["Welcome to the sixth round of HackIT a Techquest Event.\n","\nHope you had fun in the previous round, and we hope so you continue to move forward to reach the final page and successfuly complete the code hunt.\n", "\nIn this round you need to crack the password to advance in the next round.\n",], 0, 1700);
                 });
 
                 let showText = function (target, message, index, interval) {
@@ -36,10 +40,11 @@
                 <label><strong>Password: </strong> 
                     <input type="password" id = "passwordInput" placeholder="Enter the password">
                 </label>
-                <button type="submit">Submit</button>
+                <button id = "submitButton" type="submit">Submit</button>
             </form>
             <br>
         </div>
+
         <!--Input dialog box animation script-->
         <script>
             const waiting = document.getElementById('input')
@@ -52,7 +57,7 @@
         </script>
 
         <div id = "below">
-            And make sure that your <strong><i>inspection</i></strong> of this page does not goes in vain as sometime the problem solves itself if we look into the <strong><i>source</i></strong>  of it.<br><br> All the best"
+            And make sure that your <strong><i>inspection</i></strong> of this page does not goes in vain as sometime the problem solves itself if we look into the <strong><i>source</i></strong>  of it.<br><br> All the best. It's adviced you try this in a PC but if you know your way you can crack the password in mobile also.
         </div>
 
             <!--HINT DISPLAY SCRIPT-->
