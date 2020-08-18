@@ -1,5 +1,6 @@
 body{
     background:rgb(129, 129, 133);
+
 }
 section{
     width: 600px;
@@ -38,9 +39,15 @@ footer{
 #logos{
     margin-top: 70px;
     position: absolute;
-    bottom:0;
+    bottom:0px;
     text-align: center;
     font-family: monospace;
+}
+@media (max-height:650px){
+    #logos{
+        position: relative;
+    }
+    
 }
 #instagramLogo{
     width : 40px;
