@@ -3,34 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CodeHunt</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <script>
-    console.log("Weell ok I think you are getting somewhere to solve, so let me tel you a story there was a boy who was very HYPER. His hyperness caused lot of trouble in the village he stayed, so the mayor of the village wrote a TEXT to that boy's parents stating the trouble he caused. But sadly the mayors computer only accepted MARKUP LANGUAGE. So he could not send a text to the boy's parents and hence the village continued to adjust with the boys's hyperness. ")
+    console.log("Well ok I think you are getting somewhere to solve, so let me tel you a story there was a boy who was very *HYPER*. His hyperness caused lot of trouble in the village he stayed, so the mayor of the village wrote a *TEXT* to that boy's parents stating the trouble he caused. But sadly the mayors computer only accepted *MARKUP LANGUAGE*. So he could not send a text to the boy's parents and hence the village continued to live with the boys's hyperness. ")
 </script>
-<body bg = "something.jpg" onload=>
-    <header class = heading>
-        <h1>Code Hunt</h1>    
-    </header>
+<body bg = "something.jpg"> 
     <section id= description>
+        <h1>Code Hunt</h1>
         <div id ="msg">
+            <!--Display of Text-->
+             <script>
+                document.addEventListener('DOMContentLoaded', function() {
 
+                showText("#msg  ", ["Welcome to the  [something round] round of the HackIT a Techquest Event.\n","\nHope you had fun in the previous round, and we hope so you continue to move forward to reach the final page and successfuly complete the code hunt.\n", "\nIn this round you need to crack the password to advance in the next round.\n",   ], 0, 3000);
+                });
+
+                let showText = function (target, message, index, interval) {
+                if (index < message.length) {
+                    document.querySelector(target).innerText =document.querySelector(target).innerText + message[index++];
+                    setTimeout(function () { showText(target, message, index, interval); }, interval);
+                }
+                }
+            </script>
         </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-        showText("#msg", ["Welcome to the  [something round] round of the Hackit a Techquest Event.","\nHope you had fun in the previous round, and we hope so you continue to move forward to reach the final page and successfuly complete the code hunt.", "\nIn this round you need to crack the password to advance in the next round.", "\nAll the best.","\nAnd make sure that your inspection of this page does not goes in vain as sometime the problem solves itslef if we look into the source of it."], 0, 3000);
-        });
-
-        let showText = function (target, message, index, interval) {
-        if (index < message.length) {
-            document.querySelector(target).innerText =document.querySelector(target).innerText + message[index++];
-            setTimeout(function () { showText(target, message, index, interval); }, interval);
-        }
-        }
-        //["Welcome to the  [something round] round of the Hackit a Techquest Event.","\nHope you had fun in the previous round, and we hope so you continue to move forward to reach the final page and successfuly complete the code hunt.", "\nIn this round you need to crack the password to advance in the next round.", "\nAll the best.","\nAnd make sure that your inspection of this page does not goes in vain as sometime the problem solves itslef if we look into the source of it."]
-        //printLetterByLetter("msg", "Hello howdyy\nThis is great" , 50);
-    </script>
     <script>
         function check(){
             const userInput = document.getElementById("passwordInput").value;
@@ -40,10 +37,10 @@
             }
             else{
                 console.log("false");
-            }
-        
+            }    
         }
     </script>
+    <br>
         <div id = input >
             <form action="javascript:check()">
                 <label>Password: 
@@ -52,8 +49,39 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
-        
+        <br><br>
+        <!--Input dialog box animation script-->
+        <script>
+            const waiting = document.getElementById('input')
+            waiting.style.display = "none";
+            setTimeout(() => {
+                waiting.style.display = "block";
+                waiting.animate([{opacity:0},{opacity:1}],1000)
+
+            }, 7000);
+        </script>
+        <div id = "below">
+            And make sure that your <strong>inspection</strong> of this page does not goes in vain as sometime the problem solves itself if we look into the <strong>source</strong>  of it.<br><br> All the best"
+        </div>
+            <!--HINT DISPLAY-->
+            <script>
+                const anotherWaiting = document.getElementById("below");
+                anotherWaiting.style.display= "none";
+                setTimeout(() => {
+                    anotherWaiting.style.display = "block";
+                    anotherWaiting.animate([{opacity:0},{opacity:1}],2000)
+                }, 9000);             
+            </script>
     </section>
+
+    <footer>
+        <div id = logos>
+            <strong> D_Coder . Techquest . HackIt</strong><br>
+            <a href="https://www.instagram.com/d_coder_dtu/" target="_blank"><img id = instagramLogo src="logos/icon-04-512.png" alt="instagram logo"></a>
+            &nbsp&nbsp&nbsp
+            <a href = "https://www.linkedin.com/company/dcoder" target = "_blank"><img id = linkedinLogo src="logos/linkedin.png" alt="linkedin"></a>    
+        </div>
+    </footer>
       
 </body>
 </html>

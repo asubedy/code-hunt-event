@@ -1,0 +1,39 @@
+body{
+    background: rgb(129, 129, 133);
+}
+section{
+    width: 600px;
+    background: rgb(129, 129, 133);
+    padding:30px;
+    font-size: 15px;
+    font-family: fixedsys, LucidaTerminal, monospace;
+    color: #FFFFFF;
+    text-align: left;
+    overflow:auto;
+    border: 5px solid #ffffff;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+h1 {margin-bottom:10px;margin-top:-10px;}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+#logos{
+    margin-top: 70px;
+    position: fixed;
+    bottom:0;
+    text-align: center;
+    font-family: monospace;
+}
+#instagramLogo{
+    width : 40px;
+}
+#linkedinLogo{
+    width: 37px;
+}
+    
+
