@@ -17,6 +17,9 @@ section{
     margin-top:50px;
     margin-bottom:50px;
 }
+code{
+    white-space: pre-wrap;
+}
 @media (max-width: 670px){
     section{
         width: auto;
