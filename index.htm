@@ -51,26 +51,48 @@
         <!--Input dialog box animation script-->
         <script>
             const waiting = document.getElementById('input')
-            waiting.style.display = "none";
+            waiting.style.display = "none";            
             setTimeout(() => {
                 waiting.style.display = "block";
                 waiting.animate([{opacity:0},{opacity:1}],1000)
 
-            }, 8800);
+            }, 9000);
         </script>
 
-        <div id = "below">
-            And make sure that your <strong><i>inspection</i></strong> of this page does not goes in vain as sometime the problem solves itself if we look into the <strong><i>source</i></strong>  of it.<br><br> All the best. It's adviced you try this in a PC but if you know your way you can crack the password in mobile also.
+        <div id = "belowText">
+            <p id = "hint">And make sure that your <strong><i>inspection</i></strong> of this page does not goes in vain as sometime the problem solves itself if we look into the <strong><i>source</i></strong>  of it.</p>
+            <p id ="lastTextContainer">
+                <code id = "lastText"></code>
+            </p>
         </div>
 
             <!--HINT DISPLAY SCRIPT-->
             <script>
-                const anotherWaiting = document.getElementById("below");
+                const anotherWaiting = document.getElementById("hint");
                 anotherWaiting.style.display= "none";
                 setTimeout(() => {
                     anotherWaiting.style.display = "block";
                     anotherWaiting.animate([{opacity:0},{opacity:1}],2000)
-                }, 9500);             
+                }, 9600);  
+            </script>        
+
+            <!-- ALL THE BEST DISPLAY SCRIPT -->
+            <script>
+              
+                document.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(() => {
+                        showBelowText("#lastText ","All the best. It's adviced you try this in a PC but if you know your way out you can crack the password in mobile also." , 0, 30);
+                    }, 10200);
+               
+                });
+
+                let showBelowText = function (target, message, index, interval) {
+                if (index < message.length) {
+                    document.querySelector(target).innerText =document.querySelector(target).innerText + message[index++];
+                    setTimeout(function () { showText(target, message, index, interval); }, interval);
+                }
+                }
+            
             </script>
     </section>
 
